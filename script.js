@@ -12,13 +12,37 @@ let productList = [
   <h3>{name}</h3>
   <p>{price}</p>
 </div>
+<div style="background-color:{backgroundColor}">
+  <h3>{name}</h3>
+  <p>{price}</p>
+</div>
+<div style="background-color:{backgroundColor}">
+  <h3>{name}</h3>
+  <p>{price}</p>
+</div>
+<div style="background-color:{backgroundColor}">
+  <h3>{name}</h3>
+  <p>{price}</p>
+</div>
+<div style="background-color:{backgroundColor}">
+  <h3>{name}</h3>
+  <p>{price}</p>
+</div><div style="background-color:{backgroundColor}">
+  <h3>{name}</h3>
+  <p>{price}</p>
+</div>
 */
 
+
 const container = document.getElementById('container');
-productList.forEach((product) => {
-  const divItem = getDivItem(product);
-  container.appendChild(divItem);
-});
+
+// birinci yol
+
+
+// ikinci yol
+const items = productList.map(product=> getDivItem(product));
+console.log(items);
+container.append(...items);
 
 function getDivItem(product) {
   const divItem = document.createElement('div');
